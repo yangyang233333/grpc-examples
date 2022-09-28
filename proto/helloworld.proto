@@ -1,0 +1,22 @@
+syntax = "proto3";
+
+option go_package = "google.golang.org/grpc/examples/proto/proto";
+
+// 服务
+service Greeter {
+  // 发送打招呼信息
+  rpc SayHello (HelloRequest) returns (HelloReply) {}
+
+  // 再打一次招呼
+  rpc SayHelloAgain(HelloRequest) returns (HelloReply) {}
+}
+
+// 请求信息
+message HelloRequest {
+  string name = 1;
+}
+
+// 对请求的回复
+message HelloReply {
+  string message = 1;
+}
