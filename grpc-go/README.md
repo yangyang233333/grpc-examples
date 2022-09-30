@@ -13,4 +13,5 @@
 |   `-- helloworld.proto
 `-- README.md
 在.目录中运行：
+protoc --proto_path=./proto --cpp_out=./proto proto/mathtest.proto
 protoc --go_out=. --go_opt=paths=source_relative --go-grpc_out=. --go-grpc_opt=paths=source_relative proto/helloworld.proto
