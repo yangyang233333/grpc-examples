@@ -1,12 +1,15 @@
-一个grpc使用的简单例程。
+# 一个grpc使用的备忘录
 
-包含grpc-go和grpc-cpp.
+包含:
+1. [grpc-go](./grpc-go)
+2. [grpc-cpp同步版](./grpc_demo_sync)
+3. [grpc-cpp异步版](./grpc_demo_async)
 
-
-主要参考地址：
-go: https://grpc.io/docs/languages/go/quickstart/#run-the-example
-c++: http://doc.oschina.net/grpc?t=57966
-
-
+## protoc命令
+### 1. protoc for go  
 protoc --proto_path=./proto --cpp_out=./proto proto/mathtest.proto
 protoc --go_out=. --go_opt=paths=source_relative --go-grpc_out=. --go-grpc_opt=paths=source_relative proto/helloworld.proto
+
+### 2. protoc for c++  
+grpc_cpp_plugin=`which grpc_cpp_plugin`
+protoc -I. --cpp_out=. --grpc_out=. --plugin=protoc-gen-grpc=$grpc_cpp_plugin helloworld.proto

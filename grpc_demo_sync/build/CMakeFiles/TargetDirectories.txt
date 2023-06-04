@@ -1,0 +1,4 @@
+/work/grpc_demo/build/CMakeFiles/client.dir
+/work/grpc_demo/build/CMakeFiles/server.dir
+/work/grpc_demo/build/CMakeFiles/edit_cache.dir
+/work/grpc_demo/build/CMakeFiles/rebuild_cache.dir

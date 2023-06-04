@@ -1,0 +1,1 @@
+/usr/bin/c++ CMakeFiles/server.dir/greeter_server.cc.o CMakeFiles/server.dir/helloworld.grpc.pb.cc.o CMakeFiles/server.dir/helloworld.pb.cc.o -o server  /usr/lib/x86_64-linux-gnu/libgrpc++.so /usr/lib/x86_64-linux-gnu/libgrpc++_reflection.so -lpthread -lprotobuf 
