@@ -7,9 +7,13 @@
 
 ## protoc命令
 ### 1. protoc for go  
-protoc --proto_path=./proto --cpp_out=./proto proto/mathtest.proto
+```shell
+protoc --proto_path=./proto --cpp_out=./proto proto/mathtest.proto  
 protoc --go_out=. --go_opt=paths=source_relative --go-grpc_out=. --go-grpc_opt=paths=source_relative proto/helloworld.proto
+```
 
 ### 2. protoc for c++  
-grpc_cpp_plugin=`which grpc_cpp_plugin`
+```shell
+grpc_cpp_plugin=`which grpc_cpp_plugin`  
 protoc -I. --cpp_out=. --grpc_out=. --plugin=protoc-gen-grpc=$grpc_cpp_plugin helloworld.proto
+```
